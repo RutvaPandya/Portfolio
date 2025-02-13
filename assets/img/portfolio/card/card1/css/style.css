@@ -1,0 +1,608 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/0eC6fl06luXEYWpBSJvXCBJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v12/IVeH6A3MiFyaSEiudUMXExNcqx07xvyppV96iFRdwiM.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+html, body {
+    height: 100%;
+	width:100%;
+    font-size: 16px;
+    vertical-align: baseline;
+	padding:0;
+	margin:0;
+	overflow: auto;
+	-webkit-text-size-adjust: auto;
+    font-family: 'Quicksand', sans-serif;
+}
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #222; 
+}
+ul,label{
+	margin:0;
+	padding:0;
+}
+body a {
+	text-decoration:none;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+a:active,a:hover,a:focus {outline: none; text-decoration: none;}
+.container-fluid{
+	width:100%;
+	padding-left:0px;
+	padding-right:0px;
+	margin-left:0px;
+	margin-right:0px;
+}
+button:focus {outline: none;}
+:before,
+:after {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+}
+a{color: #666 !important;}
+
+
+/***********============================================== card =====================================================***********/
+@media only screen and (max-width: 600px) {
+    html, body {background: #fff;}
+	.card{padding:0px 15px 0px 15px; background-color: #222;}
+	.card .block .content{padding-left: 50px;} 
+    .card .whatsapp-input{padding-bottom: 0px;}
+    .footer-mid-wrap {margin-top: -140px;}
+    .card .card_right{padding-bottom: 40px; border: 0px solid #fff;}
+    .card_left:before{top: -20px;}
+    .card .card_left{border: 0px solid #fff;}
+}
+@media only screen and (min-width: 600px) {
+	.card{padding:0px 15px 0px 15px; background-color: #222;}
+	.card .block .content{padding-left: 50px;} 
+    .card .whatsapp-input{padding-bottom: 0px;}
+    .footer-mid-wrap {margin-top: -140px;}
+    .card .card_right{padding-bottom: 40px; border: 0px solid #fff;}
+    .card_left:before{top: -20px;}
+    .card .card_left{border: 0px solid #fff;}
+}
+@media only screen and (min-width: 768px) {
+	.card{padding:10px 20px 10px 20px; background-color: rgba(255,255,255,0);;}
+	.card .block .content{padding-left: 30px;}  
+    .card .whatsapp-input{padding-bottom: 60px;}
+    .footer-mid-wrap {margin-top: -140px;}
+    .card .card_right{padding-bottom: 0px; border: 3px solid #fff;}
+    .card_left:before{top: 0;}
+    .card .card_left{border: 5px solid #fff;}
+} 
+@media only screen and (min-width: 992px) {
+	.card{padding:10px 50px 10px 50px; background-color: rgba(255,255,255,0);;}
+	.card .block .content{padding-left: 0px;}  
+    .card .whatsapp-input{padding-bottom: 60px;}
+    .footer-mid-wrap {margin-top: -140px;}
+    .card .card_right{padding-bottom: 0px; border: 3px solid #fff;}
+    .card_left:before{top: 0;}
+    .card .card_left{border: 5px solid #fff;}
+} 
+@media only screen and (min-width: 1202px) {
+	.card{padding:10px 100px 10px 100px; background-color: rgba(255,255,255,0);;}
+	.card .block .content{padding-left: 0px;}  
+    .card .whatsapp-input{padding-bottom: 60px;}
+    .footer-mid-wrap {margin-top: -140px;}
+    .card .card_right{padding-bottom: 0px; border: 3px solid #fff;}
+    .card_left:before{top: 0;}
+    .card .card_left{border: 5px solid #fff;}
+}
+@media only screen and (min-width: 1500px) {
+	.card{padding:10px 160px 10px 160px; background-color: rgba(255,255,255,0);}
+	.card .block .content{padding-left: 0px;}
+    .card .whatsapp-input{padding-bottom: 60px;} 
+    .footer-mid-wrap {margin-top: -140px;}
+    .card .card_right{padding-bottom: 0px; border: 3px solid #fff;}
+    .card_left:before{top: 0;}
+    .card .card_left{border: 5px solid #fff;}
+}
+.card {
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    display: block !important;
+    word-wrap:normal !important;
+	border:none !important;
+    background-clip: border-box;
+    border-radius: .25rem;
+    z-index: 9;
+}
+.card_left:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: url(../images/taxi-stripe.jpg) repeat-x left;
+}
+.card .mt30{margin-top:30px;}
+.card .mt40{margin-top:40px;}
+.card .mt20{margin-top:20px;}
+.card .mt15{margin-top:15px;}
+.card .mt10{margin-top:10px;}
+.card .logo{display:block;}
+.card .logo img{margin:0 auto; padding: 25px; text-align:center; display:block;}
+.card .brdr{border-top: 10px solid #666!important; margin-top: 30px;}
+.card .card_left{background: #222; margin-top: 20px; position: relative;}
+.card .card_right{background: #222; position: relative;}
+.card .circularimg img{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #fff;
+    margin-top: -50px;
+}
+.card .title h1{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.card .title .description{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #cdcdcd;
+    margin-top: 0px;
+}
+.card .block{
+	margin: 10px 0;
+    list-style-type: none;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 5px 15px;
+    position: relative;
+    display: block;
+}
+.card .block i{
+	width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background: #ffc100;
+    padding: 7px;
+    font-size: 20px;
+    color: #222;
+    border-radius: 5px;
+    text-align: center;
+}
+.card .block .content{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+    position: relative;
+}
+.card .block .content small{
+    font-family: 'Quciksand', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #cdcdcd;
+}
+.card .block .content p{margin-bottom: 5px;}
+.card .block .content span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0px;
+}
+.card .block .content span a{color: #fff !important;}
+.card .whatsapp-input .form-control {height: 42px;}
+.card .whatsapp-input .input-group-addon, .card .whatsapp-input .form-control {
+    border: 1px solid #555;
+    background: none;
+    box-shadow: none;
+    z-index: 0;
+    position: relative;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+}
+.card .whatsapp-input .whatsapp-button{
+	background: #25d366;
+    color: #FFFFFF !important;
+    padding: 12px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #25d366;
+}
+.card .social{
+	display: inline-block;
+    width: 100%;
+    padding: 0 13px;
+    margin-bottom: 25px
+}
+.card .social li{
+	margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+}
+.card .social li a{
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    margin: 5px;
+    list-style-type: none;
+    padding: 10px 5px;
+    color: #222 !important;
+    position: relative;
+    background: #ffc100 !important;
+    border-radius: 100%;
+}
+
+
+.card #accordion .panel{
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    /*background: #f2f2f2;*/
+}
+.card #accordion .panel-heading{
+    padding: 0;
+    border-radius: 0;
+    border: none;
+}
+.card #accordion .panel-title a{
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff!important;
+    padding: 15px 42px 15px 20px;
+    background: #222;
+    border: 1px solid #555;
+    margin-bottom: 12px;
+    box-shadow: 0 -5px 0 0 #333 inset, 0 1px 2px 0 rgba(0, 0, 0, 0.01);
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.card #accordion .panel-title a .fa{padding-right: 20px; color: #cdcdcd !important;}
+.card #accordion .panel-title a:after{
+    content: "\f106";
+    font-family: "Fontawesome";
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    top: 35%;
+    right: 20px;
+    transition: all 0.3s ease 0s;
+}
+.card #accordion .panel-title a.collapsed:after{
+    content: "\f107";
+    top: 25%;
+}
+.card #accordion .panel-body{
+    background: #f9f9f9;
+    font-size: 14px;
+    color: #383838;
+    line-height: 25px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    border-left: 1px solid #cdcdcd;
+}
+.card .links li{padding: 10px 0 10px 0; position:relative; list-style:none; text-align:left;}
+.card .links li a{color: #000; font-size:14px; padding-left:25px; text-transform:capitalize;}
+.card .links li:before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: "\f28e";
+    font-family: FontAwesome;
+    color: #000;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.card #accordion span.btn{
+	font-size: 14px;
+	margin-top: 10px;
+	font-weight: 400;
+	background: #6f7072;
+	border-radius: 0px;
+    border: none;
+    float: right;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.card #accordion span.btn a{color: #FFFFFF;}
+.card #accordion h6{
+	font-size: 14px;
+	margin-top: 10px;
+	font-weight: 500;
+	color: #000;
+}
+.card #accordion h6 .fa{font-size: 22px; padding-right: 15px;}
+.card #accordion h6 a{color: #000;}
+.card #accordion .form-control{
+	display: block;
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    border-radius: 0px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+}
+.card #accordion .desc{
+    font-size: 16px;
+    font-weight: 400;
+	padding: 8px;
+	color: #000;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.card #accordion .subtitle{
+    font-size: 20px;
+    padding: 8px;
+    font-weight: 600;
+	color: #000;
+    line-height: 1.42857143;
+}
+.card #accordion .rating{margin-left: 8px;}
+.card .fa-star {color: #B4B4B4;}
+.card .fa-star.checked {color: #ffc100;}
+.card .footer{margin-top: 50px; width: 100%;}
+.card .footer p{
+    font-size: 12px;
+    line-height: 26px;
+    color: #000;
+    font-weight: 500;
+}
+.card .footer small, .card .footer small a{color: #000; font-size: 12px; font-weight: 400;}
+/***********============================================== card =====================================================***********/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Share Dialog  */
+.modal-backdrop.in {opacity: 0.9; background: rgba(0,0,0,0.9);}
+.fade .in{opacity: 1;}
+.close {
+	color: #FFFFFF;
+	opacity: 1;
+	font-size: 35px;
+}
+.close:focus, .close:hover {color: #FFFFFF;}
+.sharedialog {text-align: center;}
+.sharedialog .fa {
+	padding: 10px;
+	font-size: 30px;
+	text-align: left;
+	text-decoration: none;
+	margin: 15px 0;
+	border-radius: 5px;
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	color: #FFFFFF;
+}
+.sharedialog .fa span {
+	display: inline-block;
+	padding-left: 15px;
+	padding-top: 7px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	vertical-align: top;
+}
+/*  fixed footer social icons  */
+.footerwidget {
+	position: fixed;
+	bottom: 0;
+	float: left;
+	width: 100%;
+	z-index: 99;
+	text-align: center;
+}
+.footerwidget a {
+	float: left;
+	width: 14.28%;
+	padding: 10px 5px;
+	font-size: 16px;
+    color: #fff !important;
+}
+.footerwidget .fa-phone {
+	background: #03045e;
+	color: white;
+}
+.footerwidget .fa-whatsapp {
+	background: #023e8a;
+	color: white;
+}
+.footerwidget .fa-comment-o {
+	background: #0077b6;
+	color: white;
+}
+.footerwidget .fa-envelope {
+	background: #0096c7;
+	color: white;
+}
+.footerwidget .fa-map-marker {
+	background: #00b4d8;
+	color: white;
+}
+.footerwidget .fa-share-alt {
+	background: #90e0ef;
+	color: white;
+}
+.footerwidget .fa-qrcode {
+	background: #FF4F00;
+	color: white;
+}
+
+
+
+.footer-mid-wrap {
+    background-color: #222;
+    background-image: url(../img/texture.png);
+    background-repeat: repeat;
+    background-size: cover;
+    padding: 80px 0px 140px 0px;
+    position: relative;
+    z-index: 0;
+}
+.footer-mid-wrap:before {
+    background-image: url(../images/city-skiline.png);
+    background-size: 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+.running-taxi {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.running-taxi .taxi {
+    background-image: url(../images/truck-1.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    right: 0;
+    bottom: 0;
+    animation: running-anim 20s linear infinite;
+}
+.running-taxi .taxi-2 {
+    background-image: url(../images/truck-2.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    right: 30%;
+    bottom: 0;
+    animation: running-anim 30s linear infinite;
+}
+.running-taxi .taxi-3 {
+    background-image: url(../img/truck-3.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 70%;
+    bottom: 0;
+    animation: running-anim-left 35s linear infinite;
+}
+
+@-moz-keyframes running-anim {
+    0% {
+        right: -30%
+    }
+
+    100% {
+        right: 100%
+    }
+}
+
+@-webkit-keyframes running-anim {
+    0% {
+        right: -30%
+    }
+
+    100% {
+        right: 100%
+    }
+}
+
+@keyframes running-anim {
+    0% {
+        right: -30%
+    }
+
+    100% {
+        right: 100%
+    }
+}
+
+@-moz-keyframes running-anim-left {
+    0% {
+        left: -30%
+    }
+
+    100% {
+        left: 100%
+    }
+}
+
+@-webkit-keyframes running-anim-left {
+    0% {
+        left: -30%
+    }
+
+    100% {
+        left: 100%
+    }
+}
+
+@keyframes running-anim-left {
+    0% {
+        left: -30%
+    }
+
+    100% {
+        left: 100%
+    }
+}
