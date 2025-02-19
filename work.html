@@ -186,7 +186,7 @@
 						<div class="row">
 							<div class="col-md-3 col-sm-12 col-xs-12 brd">
 								<div class="card-header">
-							<ul class="nav nav-tabs justify-content-left tabs" role="tablist">
+							<ul class="nav nav-tabs justify-content-left tabs" id="myTab" role="tablist">
 										<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#service1" role="tab"> Website Development</a></li>
 										<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#service2" role="tab"> Logo Designing</a></li>  
 										<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#service3" role="tab"> Brochure/Flyer</a></li>  
@@ -858,6 +858,36 @@
 /***********============================================== full_portfolio_page =====================================================***********/
 
 </style>
+
+
+  <script>
+    // Ensure that when a tab is clicked, the page scrolls to the corresponding section
+    $('#myTab a').on('click', function (e) {
+      // Prevent default action (which is switching tabs)
+      e.preventDefault();
+      
+      // Get the target tab's href attribute (the section id)
+      const target = $(this).attr('href');
+      
+      // Activate the clicked tab
+      $(this).tab('show');
+      
+      // Scroll to the corresponding section
+      $('html, body').animate({
+        scrollTop: $(target).offset().top - 50 // Adjust for any header offset if necessary
+      }, 500); // Smooth scroll duration (500ms)
+    });
+
+    // Make sure active class is properly toggled for tabs
+    $('#myTab a').on('shown.bs.tab', function (e) {
+      // Get the target panel id and scroll to it
+      const targetPanel = $(e.target).attr('href');
+      $('html, body').animate({
+        scrollTop: $(targetPanel).offset().top - 50
+      }, 500);
+    });
+  </script>
+	
 </html>
 
 
