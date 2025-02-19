@@ -865,12 +865,6 @@
       tab.addEventListener('click', function(e) {
         e.preventDefault();
 
-        // Remove active class from all tabs
-        document.querySelectorAll('.tabs a').forEach(t => t.classList.remove('active'));
-
-        // Add active class to the clicked tab
-        tab.classList.add('active');
-
         // Scroll to the corresponding section
         const targetId = tab.getAttribute('href');
         const targetSection = document.querySelector(targetId);
