@@ -179,8 +179,8 @@ background: #fff;  /* fallback for old browsers */}
 header{background:#fff; font-family: 'Rubik', sans-serif; padding-top:0px; padding-bottom:35px;}
 nav{width:100%; background:#fff ;}
 #cssmenu{width:100%; }
-.navbar-fixed-top  #cssmenu > ul > li > a{padding:17px 10px;font-size:16px; display:block; text-decoration:none; text-transform:capitalize;font-weight:400; line-height:65px; color:#222;font-family: 'Rubik', sans-serif;}
-.navbar-fixed-top.scrolled  #cssmenu > ul > li > a{padding:17px 10px;font-size:16px; display:block; text-decoration:none; text-transform:capitalize;font-weight:400; line-height:35px; color:#222;font-family: 'Rubik', sans-serif;}
+.navbar-fixed-top  #cssmenu > ul > li > a{padding:17px 10px;font-size:16px; display:block; text-decoration:none; text-transform:capitalize;font-weight:400; line-height:65px; color:#222 !important;font-family: 'Rubik', sans-serif;}
+.navbar-fixed-top.scrolled  #cssmenu > ul > li > a{padding:17px 10px;font-size:16px; display:block; text-decoration:none; text-transform:capitalize;font-weight:400; line-height:35px; color:#222 !important;font-family: 'Rubik', sans-serif;}
 #cssmenu ul{width:100%;display:none; background:#fff ; margin-top:80px; padding-left:50px;}
 #cssmenu ul li{width:100%;border-top:1px solid #ccc; background:#fff;}
 #cssmenu ul li:hover{background:#ccc;}
